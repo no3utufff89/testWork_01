@@ -1,0 +1,7 @@
+@import "normalize.css";
+@import "fonts.css";
+@import "default.css";
+/*BLOCKS*/
+@import "blocks/header.css";
+@import "blocks/nav.css";
+@import "blocks/side-block.css";

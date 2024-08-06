@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Montserrat-400"),
+    url('../assets/fonts/Montserrat-400.woff2')
+    format("woff2");
+}
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    src: local("Montserrat-500"),
+    url('../assets/fonts/Montserrat-500.woff2')
+    format("woff2");
+}
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Montserrat-700"),
+    url('../assets/fonts/Montserrat-700.woff2')
+    format("woff2");
+}
+@font-face {
+    font-family: "Galdeano";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Galdeano-400"),
+    url('../assets/fonts/Galdeano-400.woff2')
+    format("woff2");
+}
+@font-face {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 400;
+    src: local("FuturaPT-400"),
+    url('../assets/fonts/FuturaPT-400.woff2')
+    format("woff2");
+}
+@font-face {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 450;
+    src: local("FuturaPT-450"),
+    url('../assets/fonts/FuturaPT-450.woff2')
+    format("woff2");
+}
+@font-face {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 500;
+    src: local("FuturaPT-500"),
+    url('../assets/fonts/FuturaPT-500.woff2')
+    format("woff2");
+}
+@font-face {
+    font-family: "FuturaPT";
+    font-style: normal;
+    font-weight: 600;
+    src: local("FuturaPT-600"),
+    url('../assets/fonts/FuturaPT-600.woff2')
+    format("woff2");
+}
