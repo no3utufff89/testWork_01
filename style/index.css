@@ -5,3 +5,9 @@
 @import "blocks/header.css";
 @import "blocks/nav.css";
 @import "blocks/side-block.css";
+@import "blocks/form.css";
+@import "blocks/content.css";
+@import "blocks/table.css";
+@import "blocks/locations-list.css";
+@import "blocks/footer.css";
+@import "blocks/overlay.css";

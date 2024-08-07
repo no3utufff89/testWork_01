@@ -2,8 +2,10 @@
     --main-white: #fff;
     --main-dark: #000;
     --main-gray: #F4F4F4;
+    --main-light-gray: #efefef;
     --accent-color: #172139;
     --main-ornge: #FF6600;
+    --main-pink: #FF5959;
 }
 
 html {
@@ -24,7 +26,8 @@ body {
     font-family: Montserrat, sans-serif;
     color: var(--main-dark);
     background-color: var(--main-gray);
-    position: relative;
+    height: 100%;
+    min-height: 100%;
 }
 
 address {
@@ -76,6 +79,10 @@ h3,
 p {
     margin: 0;
 }
+.icon {
+    width: 15px;
+    color: var(--main-ornge);
+}
 .hidden {
     display: none;
 }
@@ -84,13 +91,65 @@ p {
     background-color: transparent;
     font-size: 0;
 }
-.section__title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
+.btn-colored {
+    background-color: var(--accent-color);
+    height: 50px;
     text-transform: uppercase;
+    color: var(--main-white);
+    font-family: FuturaPT, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+.btn-colored_simple {
+    text-transform: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 37px;
+    background-color: var(--main-white);
+    border: 1px solid transparent;
+    color: var(--accent-color);
+}
+/*Активная кнопка*/
+.active-btn {
+    background-color: var(--accent-color);
+    color: var(--main-white);
+}
+.btn-outlined {
+    height: 50px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-family: FuturaPT, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    padding-left: 53px;
+    padding-right: 53px;
+}
+.synk-btn {
+    padding-left: 48px;
+    padding-right: 18px;
+    background-image: url(../assets/image/icons/synk-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center left 18px;
+}
+.del-btn {
+    background-image: url('../assets/image/icons/delete-icon.svg');
+    background-position: center left 48px;
+    padding-left: 72px;
+    padding-right: 48px;
+    flex-grow: 1;
+}
+.cancel-btn {
+    max-width: 151px;
     text-align: center;
-    margin-bottom: 40px;
+    padding-left: 31px;
+    padding-right: 31px;
 }
 
 .container {
@@ -101,7 +160,33 @@ p {
     box-sizing: border-box;
 }
 
-.section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+
+.section__title {
+    font-size: 32px;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: FuturaPT, sans-serif;
+    margin-bottom: 25px;
+}
+.section__subtitle {
+    font-size: 32px;
+    line-height: 100%;
+    font-weight: 600;
+    font-family: FuturaPT, sans-serif;
+    margin-bottom: 15px;
+}
+.main {
+    display: grid;
+    grid-template-columns: 290px auto;
+    column-gap: 50px;
+}
+.save-btn {
+    background-image: url('../assets/image/icons/save-icon.svg');
+    background-position: center left 40px;
+    padding-left: 64px;
+    padding-right: 40px;
+}
+.save-btn_long {
+    flex-grow: 1;
+    background-position: center left 130px;
 }

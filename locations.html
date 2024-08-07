@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/image/logo.svg">
+    <script src="scripts/main.js" defer></script>
+    <title>Управление 1.0</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo header__logo">
+          <img
+            src="assets/image/logo.svg"
+            alt="Логотип"
+            width="19"
+            height="33"
+            class="logo__image"
+            aria-label="Логотип ссылка на главную"
+          />
+          <span class="logo__text"> v 2.01 </span>
+        </a>
+        <button
+          class="btn header__btn logout-btn"
+          aria-label="Выход"
+          title="Выйти"
+        >
+          Выход
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="side-block">
+        <nav class="nav nav-active">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="/" class="nav-list__link item-link">
+                <svg class="icon" width="16" height="14">
+                  <use xlink:href="#icon-01"></use>
+                </svg>
+                <span class="item-link__text"> Имущество </span>
+              </a>
+            </li>
+            <li class="nav-list__item item-link">
+              <a href="/" class="nav-list__link item-link">
+                <svg class="icon" width="15" height="13.5">
+                  <use xlink:href="#icon-02"></use>
+                </svg>
+                <span class="item-link__text"> Инвентаризация </span>
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="/" class="nav-list__link item-link">
+                <svg class="icon" width="15" height="14">
+                  <use xlink:href="#icon-03"></use>
+                </svg>
+                <span class="item-link__text"> Сотрудники </span>
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="/" class="nav-list__link item-link">
+                <svg class="icon" width="15" height="16">
+                  <use xlink:href="#icon-04"></use>
+                </svg>
+                <span class="item-link__text"> Уведомления </span>
+              </a>
+            </li>
+            <li class="nav-list__item nav-list__item_active">
+              <a href="/locations.html" class="nav-list__link item-link">
+                <svg class="icon" width="15" height="18">
+                  <use xlink:href="#icon-05"></use>
+                </svg>
+                <span class="item-link__text"> Локации </span>
+              </a>
+            </li>
+            <li class="nav-list__item">
+              <a href="/settings.html" class="nav-list__link item-link">
+                <svg class="icon" width="15" height="14">
+                  <use xlink:href="#icon-06"></use>
+                </svg>
+                <span class="item-link__text"> Настройки </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn side-block__btn menu-btn">Скрыть меню</button>
+      </div>
+      <section class="section content">
+        <h2 class="section__title">Локации</h2>
+        <div class="content__header">
+          <div class="content__row">
+            <ul class="content-btns-group">
+              <li class="content-btns-group__item">
+                <button class="btn btn-colored btn-colored_simple active-btn">
+                  Все локации
+                </button>
+              </li>
+              <li class="content-btns-group__item">
+                <button class="btn btn-colored btn-colored_simple ">
+                  Импорт/Экспорт
+                </button>
+              </li>
+              <li class="content-btns-group__item">
+                <button class="btn btn-colored btn-colored_simple">
+                  Настройки
+                </button>
+              </li>
+            </ul>
+            <button class="btn btn-colored synk-btn">
+              <span class="synk-btn__text"> Синхронизция </span>
+              <span class="synk-btn__text"> (17.05.2024 15:23:21) </span>
+            </button>
+          </div>
+          <div class="content__row">
+            <button class="btn btn-colored content__add-btn">
+              Создать локацию
+            </button>
+            <form action="#" class="action-form" id="action-form">
+              <input
+                type="checkbox"
+                class="checkbox-custom"
+                checked
+                name="exact"
+                id="exact"
+              />
+              <label class="action-form__label" for="exact"
+                >Поиск по точному вхождению</label
+              >
+              <div class="action-form__inner">
+                <input
+                  type="search"
+                  placeholder="Поиск"
+                  class="action-form__search-input"
+                />
+                <button class="btn action-form__search-btn" type="submit">
+                  Выполнить поиск
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <ul class="locations-list">
+          <li class="locations-list__parent location active-location">
+            <button class="btn location__action-btn " aria-label="Развернуть или свернуть вложенные элементы"></button>
+            <p class="location__title location__title_bold">
+              Локация 1
+            </p>
+            <p class="location__info location__info_colored">
+              512
+            </p>
+            <div class="location__controls location__controls_active">
+              <button class="btn location__edit-btn">Редактировать</button>
+              <button class="btn location__del-btn">Удалить</button>
+            </div>
+            <ul class="child-location-list">
+              <li class="child-location-list__child location">
+                <button class="btn location__action-btn " aria-label="Развернуть или свернуть вложенные элементы"></button>
+                <p class="location__title location__title_medium">
+                  Подотдел 1
+                </p>
+                <p class="location__info location__info_colored">
+                  10
+                </p>
+                <p class="location__info">
+                  Для утерь
+                </p>
+              </li>
+              <li class="child-location-list__child location active-location">
+                <button class="btn location__action-btn " aria-label="Развернуть или свернуть вложенные элементы"></button>
+                <p class="location__title location__title_medium">
+                  Подотдел 2
+                </p>
+                <p class="location__info location__info_colored">
+                  100
+                </p>
+                <ul class="subChild-location-list">
+                  <li class="subChild-location-list__child">
+                    <p class="location__title location__title_half-bold">
+                      Подподотдел 1
+                    </p>
+                    <p class="location__info">
+                      Виртуальная
+                    </p>
+                    <p class="location__info location__info_bold">
+                      Без штрихкода
+                    </p>
+                  </li>
+                </ul>
+              <li class="child-location-list__child location">
+              <button class="btn location__action-btn " aria-label="Развернуть или свернуть вложенные элементы"></button>
+              <p class="location__title location__title_medium">
+                Подотдел 3
+              </p>
+              <p class="location__info location__info_colored">
+                400
+              </p>
+            </li>
+              </li>
+            </ul>
+          </li>
+          <li class="locations-list__parent location">
+            <button class="btn location__action-btn " aria-label="Развернуть или свернуть вложенные элементы"></button>
+            <p class="location__title location__title_bold">
+              Локация 2
+            </p>
+            <p class="location__info location__info_colored">
+              100
+            </p>
+          </li>
+          <li class="locations-list__parent location">
+            <button class="btn location__action-btn " aria-label="Развернуть или свернуть вложенные элементы"></button>
+            <p class="location__title location__title_bold">
+              Локация 3
+            </p>
+            <p class="location__info location__info_colored">
+              100
+            </p>
+          </li>
+
+        </ul>
+      </section>
+    </main>
+    <footer class="footer footer-bottom">
+      <div class="container">
+        <div class="footer__info">
+          <p class="footer__text">
+            Последний приём 20.09.2021 18:36:21
+          </p>
+          <p class="footer__text">
+            Последняя передача  20.09.2021 18:38:21
+          </p>
+        </div>
+        <a href="/" class="footer__link docs-link">
+          Документация
+        </a>
+      </div>
+    </footer>
+    <div class="overlay">
+      <div class="create-modal modal">
+        <p class="modal__title">
+          Создать локацию
+        </p>
+        <form class="create-form" action="" id="create-form">
+          <input type="text" class="create-form__input" placeholder="Название">
+          <input type="text" class="create-form__input" placeholder="Штрихкод">
+          <input type="text" class="create-form__input" placeholder="RFID">
+          <input type="text" class="create-form__input" placeholder="Вложенность">
+          <div class="form-controls">
+
+            <label class="create-form__label" for="virtual">
+              Виртуальная локация
+              <input class="create-form__checkbox" type="checkbox" id="virtual" name="on" value="off">
+            </label>
+            <label class="create-form__label" for="loose">
+              Виртуальная локация
+              <input class="create-form__checkbox" type="checkbox" id="loose" name="looseon" value="off">
+            </label>
+          </div>
+          <div class="create-form__btns">
+            <button class="btn btn-colored save-btn" type="submit">Создать</button>
+            <button class="btn btn-outlined close-btn" type="reset">отменить</button>
+          </div>
+        </form>
+      </div>
+      <div class="change-modal modal">
+        <p class="modal__title">
+          Изменить локацию %название%
+        </p>
+        <form class="change-form" action="" id="change-form">
+          <label class="change-form__label" for="title">Название
+            <input type="text" class="change-form__input" placeholder="Название" id="title">
+
+          </label>
+          <label class="change-form__label" for="barcode">Штрихкод
+            <input type="text" class="change-form__input" placeholder="Штрихкод" id="barcode">
+
+          </label>
+          <label class="change-form__label" for="rfid">RFID
+            <input type="text" class="change-form__input" placeholder="RFID" id="rfid">
+
+
+          </label>
+          <label class="change-form__label" for="include">Вложенность
+            <input type="text" class="inn change-form__input " placeholder="Вложенность" id="include">
+
+
+          </label>
+          <div class="form-controls">
+
+            <label class="create-form__label" for="virtual1">
+              Виртуальная локация
+              <input class="create-form__checkbox" type="checkbox" name="virtual" value="off" id="virtual1">
+            </label>
+            <label class="create-form__label" for="loose1">
+              Виртуальная локация
+              <input class="create-form__checkbox" type="checkbox" name="loose" value="off" id="loose1">
+            </label>
+          </div>
+          <div class="create-form__btns">
+            <button class="btn btn-outlined del-btn" type="submit">Удалить</button>
+            <button class="btn btn-outlined cancel-btn" type="reset">отменить</button>
+            <button class="btn btn-colored save-btn save-btn_long" type="reset">Сохранить</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <svg class="hidden">
+      <symbol id="logout-icon" viewBox="0 0 16 14">
+        <path
+          d="M9.4 12.36C9.4 12.58 9.21 12.77 8.98 12.77L1.67 12.77C1.44 12.77 1.25 12.58 1.25 12.36L1.25 1.63C1.25 1.41 1.44 1.22 1.67 1.22L8.98 1.22C9.21 1.22 9.4 1.41 9.4 1.63L9.4 4.8L10.65 4.8L10.65 1.63C10.65 0.73 9.9 0 8.98 0L1.67 0C0.75 0 0 0.73 0 1.63L0 12.36C0 13.26 0.75 14 1.67 14L8.98 14C9.9 14 10.65 13.26 10.65 12.36L10.65 9.19L9.4 9.19L9.4 12.36ZM12.55 3.62L11.66 4.48L13.6 6.38L4.45 6.38L4.45 7.61L13.6 7.61L11.66 9.51L12.55 10.37L16 7L12.55 3.62Z"
+          fill="currentColor"
+          fill-opacity="1.000000"
+          fill-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="icon-01" viewBox="0 0 15 13.5">
+        <path
+          id="Vector"
+          d="M15 7.49L15 12.75C15 12.94 14.92 13.13 14.78 13.28C14.63 13.42 14.44 13.5 14.25 13.5L8.25 13.5L8.25 7.49L15 7.49ZM6.75 7.49L6.75 13.5L0.75 13.5C0.55 13.5 0.36 13.42 0.21 13.28C0.07 13.13 0 12.94 0 12.75L0 7.49L6.75 7.49ZM6.75 0L6.75 5.99L0 5.99L0 0.75C0 0.55 0.07 0.36 0.21 0.21C0.36 0.07 0.55 0 0.75 0L6.75 0ZM14.25 0C14.44 0 14.63 0.07 14.78 0.21C14.92 0.36 15 0.55 15 0.75L15 5.99L8.25 5.99L8.25 0L14.25 0Z"
+          fill="currentColor"
+          fill-opacity="1.000000"
+          fill-rule="nonzero"
+        />
+      </symbol>
+      <symbol id="icon-02" viewBox="0 0 15 18">
+        <path
+          id="Vector"
+          d="M11.66 1.63L14.16 1.63C14.38 1.63 14.59 1.72 14.75 1.87C14.91 2.02 15 2.23 15 2.45L15 17.18C15 17.39 14.91 17.6 14.75 17.76C14.59 17.91 14.38 18 14.16 18L0.83 18C0.61 18 0.4 17.91 0.24 17.76C0.08 17.6 0 17.39 0 17.18L0 2.45C0 2.23 0.08 2.02 0.24 1.87C0.4 1.72 0.61 1.63 0.83 1.63L3.33 1.63L3.33 0L5 0L5 1.63L10 1.63L10 0L11.66 0L11.66 1.63ZM3.33 6.54L3.33 8.18L11.66 8.18L11.66 6.54L3.33 6.54ZM3.33 9.81L3.33 11.45L11.66 11.45L11.66 9.81L3.33 9.81Z"
+          fill="currentColor"
+          fill-opacity="1.000000"
+          fill-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="icon-03" viewBox="0 0 15 14">
+        <path
+          id="Vector"
+          d="M2.85 0L2.85 14L0 14L0 0L2.85 0ZM4.28 0L11.43 0C12.21 0 12.85 0.62 12.85 1.39L12.85 12.6C12.85 13.37 12.21 14 11.43 14L4.28 14L4.28 0ZM13.57 2.79L15 2.79L15 5.59L13.57 5.59L13.57 2.79ZM13.57 7L15 7L15 9.79L13.57 9.79L13.57 7ZM8.57 7C8.95 7 9.31 6.85 9.58 6.58C9.84 6.32 10 5.97 10 5.59C10 5.22 9.84 4.87 9.58 4.61C9.31 4.34 8.95 4.2 8.57 4.2C8.19 4.2 7.82 4.34 7.56 4.61C7.29 4.87 7.14 5.22 7.14 5.59C7.14 5.97 7.29 6.32 7.56 6.58C7.82 6.85 8.19 7 8.57 7ZM6.42 9.79L10.71 9.79C10.71 9.24 10.48 8.7 10.08 8.31C9.68 7.92 9.13 7.7 8.57 7.7C8 7.7 7.45 7.92 7.05 8.31C6.65 8.7 6.42 9.24 6.42 9.79Z"
+          fill="currentColor"
+          fill-opacity="1.000000"
+          fill-rule="nonzero"
+        />
+      </symbol>
+      <symbol id="icon-04" viewBox="0 0 15 16">
+        <path
+          id="Vector"
+          d="M15 13.39L0 13.39L0 11.9L0.75 11.9L0.75 6.72C0.75 3 3.77 0 7.5 0C11.22 0 14.25 3 14.25 6.72L14.25 11.9L15 11.9L15 13.39ZM5.62 14.13L9.37 14.13C9.37 14.63 9.17 15.1 8.82 15.45C8.47 15.8 7.99 16 7.5 16C7 16 6.52 15.8 6.17 15.45C5.82 15.1 5.62 14.63 5.62 14.13Z"
+          fill="currentColor"
+          fill-opacity="1.000000"
+          fill-rule="nonzero"
+        />
+      </symbol>
+      <symbol id="icon-05" viewBox="0 0 15 18">
+        <path
+          id="Vector"
+          d="M12.8 12.72L7.5 18L2.19 12.72C1.14 11.68 0.43 10.35 0.14 8.91C-0.15 7.46 0 5.96 0.57 4.6C1.13 3.24 2.09 2.07 3.33 1.25C4.56 0.43 6.01 0 7.5 0C8.98 0 10.43 0.43 11.66 1.25C12.9 2.07 13.86 3.24 14.42 4.6C14.99 5.96 15.14 7.46 14.85 8.91C14.56 10.35 13.85 11.68 12.8 12.72ZM7.5 9.11C7.94 9.11 8.36 8.93 8.67 8.62C8.99 8.31 9.16 7.89 9.16 7.45C9.16 7.01 8.99 6.59 8.67 6.28C8.36 5.97 7.94 5.79 7.5 5.79C7.05 5.79 6.63 5.97 6.32 6.28C6 6.59 5.83 7.01 5.83 7.45C5.83 7.89 6 8.31 6.32 8.62C6.63 8.93 7.05 9.11 7.5 9.11Z"
+          fill="currentColor"
+          fill-opacity="1.000000"
+          fill-rule="evenodd"
+        />
+      </symbol>
+      <symbol id="icon-06" viewBox="0 0 15 14">
+        <path
+          id="Vector"
+          d="M6.31 0.43C6.37 0.18 6.6 0 6.88 0L8.09 0C8.37 0 8.61 0.18 8.66 0.43L8.91 1.62C9.49 1.75 10.04 1.96 10.55 2.25L11.63 1.57C11.86 1.43 12.17 1.45 12.36 1.64L13.22 2.44C13.41 2.62 13.44 2.91 13.29 3.12L12.57 4.13C12.88 4.6 13.1 5.11 13.25 5.65L14.53 5.89C14.8 5.94 15 6.16 15 6.42L15 7.55C15 7.81 14.8 8.03 14.53 8.08L13.25 8.32C13.11 8.85 12.88 9.36 12.58 9.84L13.31 10.85C13.46 11.07 13.43 11.35 13.23 11.53L12.37 12.33C12.18 12.52 11.87 12.55 11.64 12.4L10.56 11.73C10.05 12.02 9.51 12.23 8.93 12.36L8.68 13.56C8.62 13.81 8.39 14 8.11 14L6.9 14C6.62 14 6.38 13.81 6.33 13.56L6.08 12.37C5.5 12.24 4.95 12.02 4.44 11.74L3.36 12.41C3.13 12.56 2.82 12.53 2.63 12.35L1.77 11.55C1.58 11.37 1.55 11.08 1.7 10.87L2.42 9.86C2.12 9.38 1.89 8.87 1.74 8.33L0.46 8.1C0.19 8.05 0 7.82 0 7.57L0 6.43C0 6.18 0.19 5.95 0.46 5.91L1.74 5.67C1.88 5.13 2.11 4.62 2.41 4.15L1.68 3.13C1.53 2.92 1.56 2.63 1.76 2.45L2.62 1.65C2.81 1.47 3.12 1.44 3.35 1.58L4.42 2.26C4.93 1.97 5.48 1.75 6.06 1.62L6.31 0.43ZM10.37 7C10.37 5.51 9.09 4.31 7.5 4.31C5.9 4.31 4.61 5.51 4.61 7C4.61 8.48 5.9 9.68 7.5 9.68C9.09 9.68 10.37 8.48 10.37 7Z"
+          fill="currentColor"
+          fill-opacity="1.000000"
+          fill-rule="evenodd"
+        />
+      </symbol>
+    </svg>
+  </body>
+</html>

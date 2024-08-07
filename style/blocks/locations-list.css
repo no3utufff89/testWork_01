@@ -1,0 +1,135 @@
+/*========Общий лист===========*/
+.locations-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+}
+.locations-list__parent {
+    display: flex;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    row-gap: 17px;
+    align-items: center;
+
+}
+.location {
+
+}
+
+/*Состояния*/
+/*Открыт*/
+.active-location>.location__action-btn {
+    background-image: url('../../assets/image/icons/minus-icon.svg');
+}
+
+/*Кнопка развернуть/свернуть (+/-) и все ее варианты*/
+.location__action-btn {
+    background-color: var(--main-ornge);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/image/icons/plus-icon.svg');
+
+}
+/*Стилизация текста в элементе*/
+
+.location__info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-right: 15px;
+}
+
+.location__info_colored {
+    color: var(--main-ornge);
+}
+.location__info_bold {
+    font-weight: 700;
+}
+
+/*Декор для всех заголовков*/
+.location__title {
+    padding-left: 19px;
+    position: relative;
+}
+.location__title:before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 16px;
+    background-image: url('../../assets/image/icons/table-decor-icon.svg');
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+}
+/*=======================*/
+
+/*Кнопки редактирования/ удаления для элемента верхнего уровня*/
+.location__controls {
+    display: none;
+}
+.location__controls_active {
+    display: flex;
+    column-gap: 20px;
+
+}
+.location__edit-btn, .location__del-btn {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    padding-left: 17px;
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+.location__edit-btn {
+    background-image: url('../../assets/image/icons/edit-icon.svg');
+    color: var(--main-ornge);
+}
+.location__del-btn {
+    background-image: url('../../assets/image/icons/delete-icon.svg');
+    color: var(--main-pink);
+}
+/*Стили для верхнего элемента*/
+/*-===================================*/
+/*Названия локации (тайтл элемента)*/
+.parent-location {
+
+}
+
+.location__title {
+    font-family: FuturaPT, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+
+    margin-right: 15px;
+}
+.location__title_bold {
+    font-weight: 600;
+}
+.location__title_medium {
+    font-weight: 500;
+}
+.location__title_half-bold {
+    font-weight: 450;
+}
+/*===========================*/
+/*Вложенные списки*/
+.child-location-list,.subChild-location-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    padding-left: 44px;
+    width: 100%;
+}
+.subChild-location-list {
+    padding-left: 58px;
+}
+.child-location-list__child,.subChild-location-list__child {
+    display: flex;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    row-gap: 17px;
+    align-items: center;
+}
